@@ -6,74 +6,149 @@
 <link rel="stylesheet" href="css/styles.css">
 <style>
 </style>
-<script src=""></script>
-<body>
+<script>
 
-  <div class="mobile-menu-window-active">
-    <span class="mobile-menu-close">
-      close
-    </span>
-    <ul class="mobile-menu-item">
+  /* MOBILE NAV OPEN AND CLOSE */
+  /* Open when someone clicks on the menu span element */
+  function openNav() {
+    document.getElementById("mobile-menu-overlay").style.width = "100%";
+    document.getElementById("mobile-menu-items").style.display = "block";
+
+  }
+
+  /* Close when someone clicks on "Close"  inside the overlay */
+  function closeNav() {
+    document.getElementById("mobile-menu-overlay").style.width = "0%";
+    document.getElementById("mobile-menu-items").style.display = "none";
+
+  }
+</script>
+
+<body>
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="mobile-menu-overlay">
+    <a href="javascript:void(0)" class="mobile-menu-close" onclick="closeNav()">close</a>
+    <ul id="mobile-menu-items">
       <li><a href="#about">about</a></li>
       <li><a href="#self-help">self-help</a></li>
       <li><a href="#blog">blog</a></li>
       <li><a href="#podcast">podcast</a></li>
       <li><a href="#work-with-us">work with us</a></li>
-      </ul>
+    </ul>
   </div>
 
-<div class="header">
-  <img src="images/nonsequitur-yellow.svg" class="logo">
-</div>
+  <!-- HEADER AND LOGO -->
+  <div class="header">
+    <img src="images/nonsequitur-yellow.svg" class="logo">
+  </div>
 
+  <!-- DESKTOP NAV -->
   <ul class="menu">
-  <li><a href="#about">about</a></li>
-  <li><a href="#self-help">self-help</a></li>
-  <li><a href="#blog">blog</a></li>
-  <li><a href="#podcast">podcast</a></li>
-  <li><a href="#work-with-us">work with us</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#self-help">self-help</a></li>
+    <li><a href="#blog">blog</a></li>
+    <li><a href="#podcast">podcast</a></li>
+    <li><a href="#work-with-us">work with us</a></li>
   </ul>
 
-  <div class="mobile-menu">
-    <p class="mobile-menu-btn">menu</p>
-  </div>
-  
+  <span id="mobile-menu-btn" onclick="openNav()">
+    menu
+  </span>
+
 
   <!-- MAIN CONTENT!!!!! BITCH -->
 
   <main>
-  <div class="wrapper">
+    <div class="wrapper">
 
-    <div class="landing-section-1">
-      <h1>
-        Get your basic emotional and social needs met.
-      </h1>
-    </div>
-
-    <div class="landing-section-2">
-      <span class="h1-italic">
-        Our vision is to shift culture towards social connectedness.      
-      </span>
-    </div>
-
-    <div class="landing-self-help">
-      <h1 id="h1-red">
-        self-help
-      </h1>
-    </div>
-
-  </div>
-  </main>
-
-</nav>
-    <div class="cards">
-        <div class="card">ONE</div>
-        <div class="card">TWO</div>
-        <div class="card">THREE</div>
-        <div class="card">FOUR</div>
-        <div class="card">FIVE</div>
-        <div class="card">SIX</div>
+      <div class="landing-section-1">
+        <h1>
+          Get your basic emotional and social needs met.
+        </h1>
       </div>
 
+      <div class="landing-section-2" id="about">
+        <span class="h1-italic">
+          Our vision is to shift culture towards social connectedness.
+        </span>
+      </div>
+
+      <div class="landing-self-help" id="self-help">
+        <h1 id="h1-red">
+          self-help
+        </h1>
+      </div>
+
+      <!-- SELF-HELP LINKS, GRID BEGINS HERE -->
+      </nav>
+
+      <div class="landing-self-help-grid">
+        <a href="">
+          <div class="card purple">How to Example Title</div>
+        </a>
+        <a href="">
+          <div class="card blue">How to Example Title</div>
+        </a>
+        <a href="">
+          <div class="card magenta">How to Example Title</div>
+        </a>
+        <a href="">
+          <div class="card pink">How to Example Title</div>
+        </a>
+        <a href="">
+          <div class="card green">How to Example Title</div>
+        </a>
+        <a href="">
+          <div class="card yellow">How to Example Title</div>
+        </a>
+      </div>
+
+      <!-- BLOG SECTION -->
+
+      <div class="landing-blog" id="blog">
+        <h2>
+          blog
+        </h2>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis sed odio eget malesuada. Praesent
+          posuere massa vitae mollis fermentum. Mauris ut fermentum mauris. Maecenas at cursus tortor. Mauris
+          condimentum, leo ac ornare tempor, libero tortor venenatis leo, eget feugiat lorem ligula eget lectus. Nulla
+          fermentum nisi lacus, non vulputate neque semper at. Pellentesque tempus elit ornare, efficitur lacus at,
+          finibus odio. Ut bibendum lacinia condimentum. In et accumsan orci. Donec est arcu, facilisis iaculis
+          condimentum non, vulputate at velit.
+
+        </p>
+      </div>
+
+      <!-- PODCAST SECTION -->
+
+      <div class="landing-section-3" id="podcast">
+        <span class="h1-emphasize">
+          podcast
+        </span>
+        <p class="white">
+          Coming soon
+        </p>
+      </div>
+
+      <!-- OFFICE HOURS -->
+
+      <div class="landing-section-4" id="work-with-us">
+        <span class="h1-italic-big">
+          Office hours
+        </span>
+          <p class="canela">
+          We offer advisory calls, suggestions, brainstorming, and guidance where you need it.
+          Could look like: one hour call or a workshop.
+          <br>
+          <br>
+          DM us <a href="https://www.instagram.com/nonsequitur.world/">@nonsequitur.world</a>
+        </p>
+      </div>
+
+    </div> <!-- wrapper end-->
+  </main>
 </body>
+
 </html>
