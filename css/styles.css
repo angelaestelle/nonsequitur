@@ -88,8 +88,8 @@ h1 {
 .header {
   width: 100%;
   background-color: #f6320f;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   top: 0;
 }
 
@@ -98,6 +98,7 @@ h1 {
   display: block;
   margin: auto;
 }
+
 
 p {
   font-family: Messina;
@@ -174,6 +175,7 @@ a:hover {
 .landing-self-help-grid {
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: -40px;
   display: grid;
   gap: 1rem;
  /* border: dashed 1px rgba(255, 0, 0, 0.349);*/
@@ -240,6 +242,12 @@ a:hover {
 
   /* MOBILE - HEADER */
 
+  .logo {
+    min-width: 25%;
+    max-width: 35%;
+  }
+
+
   /* MOBILE - TYPOGRAPHY */
 
   h1 {
@@ -255,7 +263,6 @@ a:hover {
     font-family: Canela-Italic;
     font-weight: 500;
     font-size: 1.7em;
-    text-transform: capitalize;
     color: #33105D;
   }
 
@@ -296,7 +303,6 @@ a:hover {
   
 
   /* MOBILE - NAVIGATION MENU */
-
 
 
   #mobile-menu-btn {
@@ -374,8 +380,8 @@ a:hover {
 /* LANDING SECTIONS*/
 
 .landing-section-1 {
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin-top: 100px;
+  margin-bottom: 120px;
 }
 
 .landing-self-help {
@@ -385,6 +391,7 @@ a:hover {
 .landing-blog {
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 
@@ -412,6 +419,15 @@ a:hover {
 }
 
 @media (min-width: 600px) {
+
+  /*MOBILE - HEADER */
+
+  .logo {
+    min-width: 20%;
+    max-width: 25%;
+  }
+
+
   /* MOBILE - TYPOGRAPHY */
 
   h1 {
@@ -427,7 +443,6 @@ a:hover {
     font-family: Canela-Italic;
     font-weight: 500;
     font-size: 2.7em;
-    text-transform: capitalize;
     color: #33105D;
   }
 
@@ -460,6 +475,11 @@ a:hover {
 
   /* LANDING SECTIONS */
 
+  .landing-section-1 {
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+
   .landing-section-3 {
     margin: auto;
     margin-left: 20px;
@@ -481,6 +501,11 @@ a:hover {
 }
 
 @media (min-width: 900px) {
+
+  .logo {
+    width: 13%;
+  }
+
   /* BIG SCREENS - TYPOGRAPHY */
 
   h1 {
@@ -496,7 +521,6 @@ a:hover {
     font-family: Canela-Italic;
     font-weight: 500;
     font-size: 4em;
-    text-transform: capitalize;
     color: #33105D;
   }
 
@@ -531,6 +555,13 @@ a:hover {
     font-size: 1.7em;
     line-height: 1.5em;
     color: #33105D;
+  }
+
+  /* HEADER STUFF */
+
+  .logo {
+    min-width: 20%;
+    max-width: 25%;
   }
 
   /* MOBILE - NAVIGATION MENU */
@@ -586,7 +617,9 @@ a:hover {
 
 
 .landing-section-1 {
-  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+
 }
 
 .landing-self-help {
