@@ -268,11 +268,12 @@ a:hover {
   }
 
   .h1-emphasize {
+    z-index: 0;
     font-family: Canela;
     font-weight: 500;
-    font-size: 3.5em;
+    font-size: 2.5em;
     text-transform: uppercase;
-    filter: drop-shadow(5px 5px 0 #8D176D);
+   filter: drop-shadow(5px 5px 0 #8D176D);
     color: #F4F0E0;
   }
 
@@ -314,6 +315,7 @@ a:hover {
   }
 
   #mobile-menu-overlay {
+    z-index: 999;
     width: 0;
     position: fixed;
     background: #33105D;
@@ -446,6 +448,15 @@ a:hover {
     color: #33105D;
   }
 
+  /* MOBILE MENU */
+
+
+  #mobile-menu-items {
+    position: relative;
+    top: 50px;
+    display: none;
+
+  }
 
   /* LANDING SECTIONS */
 
@@ -526,6 +537,7 @@ a:hover {
 
   .mobile-menu {
     width: 0%;
+    display: none;
   }
 
   .mobile-menu-items {
@@ -538,6 +550,7 @@ a:hover {
 
   #mobile-menu-overlay {
     width: 0%;
+    display: none;
   }
 
 
