@@ -15,9 +15,7 @@ Ink - black                     #111111
 
 */
 
-html {
-  font-size: 22px;
-}
+
 
 body {
   background: #F4F0E0;
@@ -89,7 +87,6 @@ h1 {
   width: 100%;
   background-color: #f6320f;
   padding-top: 10px;
-  padding-bottom: 10px;
   top: 0;
 }
 
@@ -124,10 +121,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  font-weight: 900;
-  color: #E33F08;
-}
 
 /* MAIN CONTENT */
 
@@ -207,14 +200,21 @@ a:hover {
 /*SELF-HELP GRID, CARD STYLING*/
 
 .card {
-  background-color: dodgerblue;
+  display: flex;
+  height: 300px;
+  margin: auto;  position: relative;
   color: white;
-  padding: 1rem;
-  height: 4rem;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  align-items:center;
+  justify-content:center;
   border-radius: 10px;
+  padding: 5px;
 }
+
+.card:hover {
+  transform: translate(3px, 3px);
+  transition: 0.2s;
+}
+
 
 .purple {
   background: #33105D;
@@ -250,15 +250,31 @@ a:hover {
   color: #F4F0E0;
 }
 
+  /* BLOG EXCERPTS */
+
+  .excerpt {
+    display: inline-block;
+    height: 100%;
+    margin: auto;  
+    position: relative;
+    color: white;
+    padding: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 10px;
+  }
+
 /* MOBILE - MEDIA SCREENS */
 
 @media (min-width: 300px) {
 
   /* MOBILE - HEADER */
 
+  .header {
+    padding-bottom: 5px;
+  }
+
   .logo {
-    min-width: 25%;
-    max-width: 35%;
+    max-height: 30px;
   }
 
 
@@ -267,7 +283,7 @@ a:hover {
   h1 {
     font-family: Canela;
     font-weight: 500;
-    font-size: 2.5em;
+    font-size: 3.2em;
     text-transform: uppercase;
     color: #33105D;
     text-align: center;
@@ -276,14 +292,14 @@ a:hover {
   .h1-italic {
     font-family: Canela-Italic;
     font-weight: 500;
-    font-size: 1.7em;
+    font-size: 3.2em;
     color: #33105D;
   }
 
   .h1-italic-big {
     font-family: Canela-Italic;
     font-weight: 500;
-    font-size: 3em;
+    font-size: 3.2em;
     text-transform: capitalize;
     color: #33105D;
   }
@@ -292,29 +308,33 @@ a:hover {
     z-index: 0;
     font-family: Canela;
     font-weight: 500;
-    font-size: 2.5em;
+    font-size: 3.2em;
     text-transform: uppercase;
    filter: drop-shadow(5px 5px 0 #8D176D);
     color: #F4F0E0;
   }
 
-  .landing-blog h2 {
+  h2 {
     font-family: Canela;
     font-weight: 500;
     font-size: 2em;
-    text-transform: uppercase;
+    line-height: 1.2em;
     color: #33105D;
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 0;
   }
 
   .canela {
     font-family: Canela;
-    font-size: 1.2em;
+    font-size: 1.4em;
     line-height: 1.4em;
     color: #33105D;
   }
   
+  .read-more {
+    font-family: Messina Sans;
+    font-weight: 700;
+    color: #33105D;
+  }
 
   /* MOBILE - NAVIGATION MENU */
 
@@ -328,7 +348,7 @@ a:hover {
     text-transform: uppercase;
     text-align: center;
     vertical-align: middle;
-    background-color: #33105D;
+    background-color: #F6320F;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -338,7 +358,7 @@ a:hover {
     z-index: 999;
     width: 0;
     position: fixed;
-    background: #33105D;
+    background: rgba(51, 16, 93, .9);
     height: 400px;
     /* border: dashed 1px red; */
 
@@ -362,13 +382,22 @@ a:hover {
     position: relative;
     top: 50px;
     display: none;
-
   }
 
   /* NAVIGATION MENU */
 
   .menu {
     display: none;
+  }
+
+  .menu-icon {
+    height: 10px;
+    padding-bottom: 2px;
+  }
+
+  .close-icon {
+    height: 25px;
+    padding-bottom: 2px;
   }
 
   li {
@@ -380,22 +409,32 @@ a:hover {
     display: inline-block;
     width: 300px;
     text-decoration: none;
-    color: #F4F0E0;
+    color: #FFF7EA;
     text-transform: uppercase;
-    font-size: 1.5em;
-    line-height: 1.7em;
+    font-size: 2em;
+    line-height: 1.5em;
   }
 
-  li a:hover {
-    font-weight: 900;
-    transition: 0.3s;
-  }
+    /* BLOG EXCERPTS */
+
+    .excerpt {
+      display: inline-block;
+      height: 100%;
+      margin: auto;  
+      position: relative;
+      color: white;
+      padding: 20px;
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 10px;
+    }
 
 /* LANDING SECTIONS*/
 
 .landing-section-1 {
-  margin-top: 100px;
-  margin-bottom: 120px;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .landing-self-help {
@@ -405,8 +444,8 @@ a:hover {
 .landing-blog {
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .landing-section-3 {
@@ -427,9 +466,9 @@ a:hover {
   .landing-self-help-grid {
     padding: 20px;
     grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 100px;
   }
   
-
 }
 
 @media (min-width: 600px) {
@@ -437,8 +476,7 @@ a:hover {
   /*MOBILE - HEADER */
 
   .logo {
-    min-width: 20%;
-    max-width: 25%;
+    height: 30px;
   }
 
 
@@ -447,7 +485,7 @@ a:hover {
   h1 {
     font-family: Canela;
     font-weight: 500;
-    font-size: 3.2em;
+    font-size: 4em;
     text-transform: uppercase;
     color: #33105D;
     text-align: center;
@@ -456,7 +494,7 @@ a:hover {
   .h1-italic {
     font-family: Canela-Italic;
     font-weight: 500;
-    font-size: 2.7em;
+    font-size: 4em;
     color: #33105D;
   }
 
@@ -472,8 +510,23 @@ a:hover {
   .h1-italic-big {
     font-family: Canela-Italic;
     font-weight: 500;
-    font-size: 4.5em;
+    font-size: 4em;
     text-transform: capitalize;
+    color: #33105D;
+  }
+
+  h2 {
+    font-family: Canela;
+    font-weight: 500;
+    font-size: 2em;
+    line-height: 1em;
+    color: #33105D;
+    margin-top: 0;
+  }
+
+  .read-more {
+    font-family: Messina Sans;
+    font-weight: 700;
     color: #33105D;
   }
 
@@ -491,7 +544,7 @@ a:hover {
 
   .landing-section-1 {
     margin-top: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .landing-section-3 {
@@ -512,12 +565,41 @@ a:hover {
   .landing-self-help-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .card {
+    padding: 10px;
+  }
 }
 
 @media (min-width: 900px) {
 
+  .header {
+    padding-bottom: 2px;
+  }
+
   .logo {
-    width: 13%;
+    height: 50px;
+  }
+
+  /* BLOG EXCERPTS */
+
+  .excerpt {
+    display: inline-block;
+    height: 100%;
+    margin: auto;  
+    position: relative;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 10px;
+  }
+
+  .excerpt:hover {
+    transform: translate(3px, 3px);
+    transition: 0.3s;
+    background: #E8E3D0;
+    
   }
 
   /* BIG SCREENS - TYPOGRAPHY */
@@ -525,7 +607,7 @@ a:hover {
   h1 {
     font-family: Canela;
     font-weight: 500;
-    font-size: 5em;
+    font-size: 6.5em;
     text-transform: uppercase;
     color: #33105D;
     margin-top: 0;
@@ -534,14 +616,14 @@ a:hover {
   .h1-italic {
     font-family: Canela-Italic;
     font-weight: 500;
-    font-size: 4em;
+    font-size: 5em;
     color: #33105D;
   }
 
   .h1-italic-big {
     font-family: Canela-Italic;
     font-weight: 500;
-    font-size: 5em;
+    font-size: 6em;
     text-transform: capitalize;
     color: #33105D;
   }
@@ -549,7 +631,7 @@ a:hover {
   .h1-emphasize {
     font-family: Canela;
     font-weight: 500;
-    font-size: 5em;
+    font-size: 6.4em;
     text-transform: uppercase;
     filter: drop-shadow(5px 5px 0 #8D176D);
     color: #F4F0E0;
@@ -558,8 +640,8 @@ a:hover {
   h2 {
     font-family: Canela;
     font-weight: 500;
-    font-size: 4em;
-    text-transform: uppercase;
+    font-size: 3em;
+    line-height: 1em;
     color: #33105D;
     margin-top: 0;
   }
@@ -571,12 +653,12 @@ a:hover {
     color: #33105D;
   }
 
-  /* HEADER STUFF */
-
-  .logo {
-    min-width: 20%;
-    max-width: 25%;
+  .read-more {
+    font-family: Messina Sans;
+    font-weight: 700;
+    color: #33105D;
   }
+
 
   /* MOBILE - NAVIGATION MENU */
 
@@ -610,6 +692,7 @@ a:hover {
     text-align: center;
   }
 
+
   li {
     display: inline;
   }
@@ -618,9 +701,10 @@ a:hover {
     display: inline-block;
     width: 170px;
     text-decoration: none;
-    color: #33105D;
+    color: #FFF7EA;
     text-transform: uppercase;
     font-size: 1em;
+    line-height: 1em;
   }
 
   li a:hover {
@@ -631,8 +715,8 @@ a:hover {
 
 
 .landing-section-1 {
-  margin-top: 20px;
-  margin-bottom: 100px;
+  margin-top: 70px;
+  margin-bottom: 120px;
 
 }
 
@@ -643,16 +727,14 @@ a:hover {
 .landing-blog {
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 80px;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 
-.landing-blog h2 {
-  font-size: 3em;
-  text-align: center;
-  text-transform: uppercase;
-  color: #33105D;
-  text-align: center;
-  margin-top: 70px;
-  }
+#blog-h2 {
+  margin-bottom: 10px;
+}
 
 
   /*SELF-HELP GRID */
