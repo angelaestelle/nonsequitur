@@ -106,7 +106,7 @@ p {
 }
 
 .breadcrumb {
-  margin-bottom: 50px;
+  margin: 50px 0 50px 10px;
 
 }
 
@@ -133,6 +133,11 @@ a {
 
 /* BUTTON STYLES*/
 
+.button-container {
+  text-align: center;
+  padding: 20px 0 40px 0;
+}
+
 .button-01 a {
   display: inline-block;
   font-family: Messina;
@@ -143,7 +148,6 @@ a {
   width: 100%;
   padding: 10px 0 10px 0;
   text-align: center;
-  vertical-align: middle;
 }
 
 .button-01 a:hover {
@@ -151,11 +155,14 @@ a {
 }
 
 .button-01 {
+  display: inline-block;
+  margin: 0 auto;
   min-width: 100px;
   color: #273A9F;
   border: solid 2px #273A9F;
   background-color: transparent;
   border-radius: 7px;
+  text-align: center;
 }
 
 .button-01:hover {
@@ -457,6 +464,7 @@ a {
     background: rgba(51, 16, 93, .6);
     height: 400px;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5 px) !important;
     /* border: dashed 1px red; */
 
   }
@@ -491,11 +499,15 @@ a {
     font-family: Messina;
   }
 
+  #toc-expand {
+    display: none;
+    margin: 0;
+  }
+
   .toc-container {
     width: 100%;
     margin: auto;
     max-width: 1200px;
-    padding: 10px;
   }
   
   .toc-menu {
@@ -503,8 +515,38 @@ a {
     color: #E8E3D0;
     display: block;
     font-weight: 700;
-    padding: 10px 0 10px 0;
     text-align: left;
+  }
+
+  .tocbar-toggler {
+    background: none;
+    border: none;
+    width: 100%;
+    font-family: Messina;
+    font-weight: 700;
+    color: #E8E3D0;
+    font-size: 1em;
+    padding: 10px;
+    text-align: left;
+  }
+
+  #toc-open {
+    display: none;
+  }
+
+  #toc-close, #toc-open {
+    width: 100%;
+  }
+
+  .toc-item {
+    list-style-type: none;
+    padding: 10px 0 10px 0;
+  }
+
+  .toc-link {
+    width: 100%;
+    color: #E8E3D0;
+    font-weight: 500;
   }
 
   .sticky {
@@ -528,19 +570,27 @@ a {
     padding-bottom: 2px;
   }
 
-  li {
-    display: block;
+.menu {
+    display: none;
   }
 
-  li a {
+  .mobile-nav-li {
     font-family: Messina;
+    display: inline-block;
+    width: 300px;
+    text-transform: uppercase;
+list-style-type: none;    
+color: #FFF7EA;
+  }
+
+  
+.mobile-nav-a {
     display: inline-block;
     width: 300px;
     text-decoration: none;
     color: #FFF7EA;
-    text-transform: uppercase;
-    font-size: 2em;
-    line-height: 1.5em;
+    font-size: 1.7em;
+    line-height: 2em;
   }
 
   /* BLOG EXCERPTS */
@@ -684,12 +734,29 @@ a {
 
   /* MOBILE MENU */
 
-
   #mobile-menu-items {
     position: relative;
     top: 50px;
     display: none;
+  }
 
+  .mobile-nav-li {
+    font-family: Messina;
+    display: block;
+    width: 300px;
+    text-transform: uppercase;
+    list-style-type: none;    
+    color: #FFF7EA;
+  }
+
+  
+.mobile-nav-a {
+    display: inline-block;
+    width: 300px;
+    text-decoration: none;
+    color: #FFF7EA;
+    font-size: 1.7em;
+    line-height: 2em;
   }
 
   /* LANDING SECTIONS */
@@ -747,7 +814,7 @@ a {
   TABLE OF CONTENTS */
 
   #tocbar {
-    z-index: 100;
+    z-index: 99;
     overflow: hidden;
     background: #4E352D;
     width: 100%;    
@@ -760,13 +827,40 @@ a {
     max-width: 1200px;
     padding: 10px;
   }
+
+
+  #toc-expand {
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 0 20px 20px;
+  }
   
   .toc-menu {
     width: 100%;
     color: #E8E3D0;
     display: block;
     font-weight: 700;
+    text-align: left;
+  }
+
+  .toc-item {
+    display: block;
     padding: 10px 0 10px 0;
+  }
+  
+  .toc-link {
+    width: 100%;
+    text-transform: none;
+  }
+  
+  .tocbar-toggler {
+    display: block;
+    font-family: Messina;
+    font-size: 1em;
+    width: 100%;
+    font-weight: 700;
+    color: #E8E3D0;
     text-align: left;
   }
 
@@ -935,7 +1029,7 @@ a {
 
 
   .landing-section-1 {
-    margin-top: 70px;
+    margin-top: 100px;
     margin-bottom: 120px;
 
   }

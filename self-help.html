@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>nonsequitur world 🌎</title>
+<link rel="icon" type="image/x-icon" href="images/ns-favicon.svg">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+</style>
+<script>
+
+  /* MOBILE NAV OPEN AND CLOSE */
+  /* Open when someone clicks on the menu span element */
+  function openNav() {
+    document.getElementById("mobile-menu-overlay").style.width = "100%";
+    document.getElementById("mobile-menu-items").style.display = "block";
+
+  }
+
+  /* Close when someone clicks on "Close"  inside the overlay */
+  function closeNav() {
+    document.getElementById("mobile-menu-overlay").style.width = "0%";
+    document.getElementById("mobile-menu-items").style.display = "none";
+
+  }
+</script>
+
+<body>
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="mobile-menu-overlay">
+    <a href="javascript:void(0)" class="mobile-menu-close" onclick="closeNav()">
+      <img src="images/close.svg" class="close-icon" alt="close"></a>
+    <ul id="mobile-menu-items">
+      <li class="mobile-nav-li"><a href="about.html" class="mobile-nav-a">about</a></li>
+      <li class="mobile-nav-li"><a href="self-help.html" class="mobile-nav-a">self-help</a></li>
+      <li class="mobile-nav-li"><a href="blog.html" class="mobile-nav-a">blog</a></li>
+      <li class="mobile-nav-li"><a href="podcast.html" class="mobile-nav-a">podcast</a></li>
+      <li class="mobile-nav-li"><a href="work-with-us.html" class="mobile-nav-a">work with us</a></li>
+    </ul>
+
+  </div>
+
+  <!-- HEADER AND LOGO -->
+  <div class="header">
+    <a href="index.html">
+      <img src="images/nonsequitur-yellow.svg" class="logo" alt="nonsequitur logo">
+    </a>
+
+    <!-- MOBILE MENU NAVIGATION BAR -->
+    <span id="mobile-menu-btn" onclick="openNav()">
+      <img src="images/menu.svg" class="menu-icon" alt="menu">
+    </span>
+
+    <!-- DESKTOP NAV -->
+    <ul class="menu">
+      <li><a href="about.html">about</a></li>
+      <li><a href="self-help.html">self-help</a></li>
+      <li><a href="blog.html">blog</a></li>
+      <li><a href="podcast.html">podcast</a></li>
+      <li><a href="work-with-us.html">work with us</a></li>
+    </ul>
+  </div>
+
+
+  <!-- MAIN CONTENT!!!!! BITCH -->
+
+  <main>
+    <div class="wrapper">
+
+      <div class="landing-section-1">
+        <h1>
+          self-help
+        </h1>
+      </div>
+
+
+      <div class="landing-section-2" id="about">
+        <span class="h1-italic">
+          Our vision is to shift culture towards social connectedness.
+        </span>
+      </div>
+
+
+    </div> <!-- wrapper end-->
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer">
+      <a href="https://www.instagram.com/nonsequitur.world/">
+        <img src="images/instagram.svg" class="social" alt="instagram logo">
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -26,38 +26,40 @@
 </script>
 
 <body>
-  <!-- MOBILE NAV OVERLAY -->
-  <div id="mobile-menu-overlay">
-    <a href="javascript:void(0)" class="mobile-menu-close" onclick="closeNav()">
-    <img src="images/close.svg" class="close-icon" alt="close"></a>
-    <ul id="mobile-menu-items">
-      <li><a href="#about">about</a></li>
-      <li><a href="#self-help">self-help</a></li>
-      <li><a href="#blog">blog</a></li>
-      <li><a href="#podcast">podcast</a></li>
-      <li><a href="#work-with-us">work with us</a></li>
-    </ul>
-  </div>
-
-  <!-- HEADER AND LOGO -->
-  <div class="header" id="home">
-        <a href="#home"> 
-            <img src="images/nonsequitur-yellow.svg" class="logo" alt="nonsequitur logo">
-        </a>   <!-- DESKTOP NAV -->
-   <ul class="menu">
-    <li><a href="#about">about</a></li>
-    <li><a href="#self-help">self-help</a></li>
-    <li><a href="#blog">blog</a></li>
-    <li><a href="#podcast">podcast</a></li>
-    <li><a href="#work-with-us">work with us</a></li>
-  </ul>
+    <!-- MOBILE NAV OVERLAY -->
+    <div id="mobile-menu-overlay">
+      <a href="javascript:void(0)" class="mobile-menu-close" onclick="closeNav()">
+          <img src="images/close.svg" class="close-icon" alt="close"></a>
+      <ul id="mobile-menu-items">
+          <li class="mobile-nav-li"><a href="#about" class="mobile-nav-a">about</a></li>
+          <li class="mobile-nav-li"><a href="#self-help" class="mobile-nav-a">self-help</a></li>
+          <li class="mobile-nav-li"><a href="#blog" class="mobile-nav-a">blog</a></li>
+          <li class="mobile-nav-li"><a href="#podcast" class="mobile-nav-a">podcast</a></li>
+          <li class="mobile-nav-li"><a href="#work-with-us" class="mobile-nav-a">work with us</a></li>
+      </ul>
 
   </div>
 
+    <!-- HEADER AND LOGO -->
+    <div class="header">
+      <a href="index.html">
+          <img src="images/nonsequitur-yellow.svg" class="logo" alt="nonsequitur logo">
+      </a>
 
-  <span id="mobile-menu-btn" onclick="openNav()">
-    <img src="images/menu.svg" class="menu-icon" alt="menu">
-  </span>
+      <!-- MOBILE MENU NAVIGATION BAR -->
+      <span id="mobile-menu-btn" onclick="openNav()">
+          <img src="images/menu.svg" class="menu-icon" alt="menu">
+      </span>
+
+      <!-- DESKTOP NAV -->
+      <ul class="menu">
+          <li><a href="#about">about</a></li>
+          <li><a href="#self-help">self-help</a></li>
+          <li><a href="#blog">blog</a></li>
+          <li><a href="#podcast">podcast</a></li>
+          <li><a href="#work-with-us">work with us</a></li>
+      </ul>
+  </div>
 
 
   <!-- MAIN CONTENT!!!!! BITCH -->

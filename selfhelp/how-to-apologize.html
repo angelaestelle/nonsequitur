@@ -5,8 +5,6 @@
 <link rel="icon" type="image/x-icon" href="images/ns-favicon.svg">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="../css/styles.css">
-<style>
-</style>
 <script>
     /* MOBILE NAV OPEN AND CLOSE */
     /* Open when someone clicks on the menu span element */
@@ -34,11 +32,33 @@
 
     // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function stickyNav() {
-        if (window.pageYOffset >= 115) {
+        if (window.pageYOffset >= 100) {
             document.getElementById("tocbar").classList.add("sticky")
         } else {
             document.getElementById("tocbar").classList.remove("sticky")
         }
+    }
+
+    /* TOC BAR TOGGLER */
+
+    function openTOC() {
+        var toggler = document.getElementById("toc-expand");
+        var tocOpen = document.getElementById("toc-open");
+        var tocClose = document.getElementById("toc-close");
+
+        toggler.style.display = "block";
+        tocOpen.style.display = "inline-block";
+        tocClose.style.display = "none";
+    }
+
+    function closeTOC() {
+        var toggler = document.getElementById("toc-expand");
+        var tocOpen = document.getElementById("toc-open");
+        var tocClose = document.getElementById("toc-close");
+
+        toggler.style.display = "none";
+        tocOpen.style.display = "none";
+        tocClose.style.display = "inline-block";
     }
 
 </script>
@@ -49,11 +69,11 @@
         <a href="javascript:void(0)" class="mobile-menu-close" onclick="closeNav()">
             <img src="../images/close.svg" class="close-icon" alt="close"></a>
         <ul id="mobile-menu-items">
-            <li><a href="#about">about</a></li>
-            <li><a href="#self-help">self-help</a></li>
-            <li><a href="#blog">blog</a></li>
-            <li><a href="#podcast">podcast</a></li>
-            <li><a href="#work-with-us">work with us</a></li>
+            <li class="mobile-nav-li"><a href="../about.html" class="mobile-nav-a">about</a></li>
+            <li class="mobile-nav-li"><a href="../self-help.html" class="mobile-nav-a">self-help</a></li>
+            <li class="mobile-nav-li"><a href="../blog.html" class="mobile-nav-a">blog</a></li>
+            <li class="mobile-nav-li"><a href="../podcast.html" class="mobile-nav-a">podcast</a></li>
+            <li class="mobile-nav-li"><a href="../work-with-us.html" class="mobile-nav-a">work with us</a></li>
         </ul>
 
     </div>
@@ -71,21 +91,52 @@
 
         <!-- DESKTOP NAV -->
         <ul class="menu">
-            <li><a href="#about">about</a></li>
-            <li><a href="#self-help">self-help</a></li>
-            <li><a href="#blog">blog</a></li>
-            <li><a href="#podcast">podcast</a></li>
-            <li><a href="#work-with-us">work with us</a></li>
+            <li><a href="../about.html">about</a></li>
+            <li><a href="../self-help.html">self-help</a></li>
+            <li><a href="../blog.html">blog</a></li>
+            <li><a href="../podcast.html">podcast</a></li>
+            <li><a href="../work-with-us.html">work with us</a></li>
         </ul>
     </div>
-    
+
 
     <!-- TABLE OF CONTENTS NAV-->
     <div id="tocbar">
-        <ul class="toc-container">
-            <div class="toc-menu">
-                Table of Contents
+        <div id="tocbar-target">
+            <div class="toc-container">
+                <div class="toc-menu">
+                    <!-- TOGGLER - OPEN / CLOSE -->
+                    <button class="tocbar-toggler">
+                        <span id="toc-close" onclick="openTOC()">
+                            + Table of Contents</span>
+                        <span id="toc-open" onclick="closeTOC()">
+                            – Table of Contents</span>
+                        <!-- <img src="../images/collapsible-closed.svg" id="toc-close" onclick="openTOC()" />
+                    <img src="../images/collapsible-opened.svg" id="toc-open" onclick="closeTOC()" />
+                    Table of Contents !-->
+                    </button>
+                </div>
             </div>
+        </div>
+        <ul id="toc-expand">
+            <li class="toc-item">
+                <a class="toc-link" href="#backgroundinfo">1. Background Info</a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#">2. Disclaimer </a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#">3. How to Use</a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#">4. Tips for a Smoooooth Apology</a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#">5. Notes App-ology Rubric</a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#">6. Extra credit</a>
+            </li>
         </ul>
     </div>
 
@@ -128,7 +179,7 @@
                 </p>
 
                 <!-- HEADING 3 -->
-                <h4>
+                <h4 id="backgroundinfo">
                     Background Info
                 </h4>
 
@@ -169,11 +220,18 @@
                     </div>
                 </div>
 
-
-                <button class="button-01">
-                    <a href="../images/apology-guide/IM SORRY01-B.jpg" target="_blank">Download (update
-                        link)</a>
-                </button>
+                <div class="button-container">
+                    <button class="button-01">
+                        <a href="../images/apology-guide/IM SORRY01-B.jpg" target="_blank">
+                            Download .PDF (update
+                            link)</a>
+                    </button>
+                    <button class="button-01">
+                        <a href="../images/apology-guide/IM SORRY01-B.jpg" target="_blank">
+                            Download .PNG (update
+                            link)</a>
+                    </button>
+                </div>
 
                 <!-- HEADING 3 -->
                 <h4>
