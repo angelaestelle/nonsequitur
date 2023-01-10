@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>nonsequitur world 🌎</title>
+<link rel="icon" type="image/x-icon" href="images/ns-favicon.svg">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+</style>
+<script>
+    /* MOBILE NAV OPEN AND CLOSE */
+    /* Open when someone clicks on the menu span element */
+    function openNav() {
+        document.getElementById("mobile-menu-overlay").style.width = "100%";
+        document.getElementById("mobile-menu-items").style.display = "block";
+    }
+
+    /* Close when someone clicks on "Close"  inside the overlay */
+    function closeNav() {
+        document.getElementById("mobile-menu-overlay").style.width = "0%";
+        document.getElementById("mobile-menu-items").style.display = "none";
+    }
+
+
+    /* TOC NAV - STICKY ON SCROLL */
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () { stickyNav() };
+
+    // Get the navbar
+    var tocbar = document.getElementById("tocbar");
+
+    // Get the offset position of the navbar
+    var sticky = tocbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function stickyNav() {
+        if (window.pageYOffset >= 115) {
+            document.getElementById("tocbar").classList.add("sticky")
+        } else {
+            document.getElementById("tocbar").classList.remove("sticky")
+        }
+    }
+
+</script>
+
+<body>
+    <!-- MOBILE NAV OVERLAY -->
+    <div id="mobile-menu-overlay">
+        <a href="javascript:void(0)" class="mobile-menu-close" onclick="closeNav()">
+            <img src="../images/close.svg" class="close-icon" alt="close"></a>
+        <ul id="mobile-menu-items">
+            <li><a href="#about">about</a></li>
+            <li><a href="#self-help">self-help</a></li>
+            <li><a href="#blog">blog</a></li>
+            <li><a href="#podcast">podcast</a></li>
+            <li><a href="#work-with-us">work with us</a></li>
+        </ul>
+
+    </div>
+
+    <!-- HEADER AND LOGO -->
+    <div class="header">
+        <a href="../index.html">
+            <img src="../images/nonsequitur-yellow.svg" class="logo" alt="nonsequitur logo">
+        </a>
+
+        <!-- MOBILE MENU NAVIGATION BAR -->
+        <span id="mobile-menu-btn" onclick="openNav()">
+            <img src="../images/menu.svg" class="menu-icon" alt="menu">
+        </span>
+
+        <!-- DESKTOP NAV -->
+        <ul class="menu">
+            <li><a href="#about">about</a></li>
+            <li><a href="#self-help">self-help</a></li>
+            <li><a href="#blog">blog</a></li>
+            <li><a href="#podcast">podcast</a></li>
+            <li><a href="#work-with-us">work with us</a></li>
+        </ul>
+    </div>
+    
+
+    <!-- TABLE OF CONTENTS NAV-->
+    <div id="tocbar">
+        <ul class="toc-container">
+            <div class="toc-menu">
+                Table of Contents
+            </div>
+        </ul>
+    </div>
+
+
+    <!-- 
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!! 
+-->
+
+    <!-- MAIN CONTENT!!!!! BITCH -->
+
+    <main>
+        <div class="wrapper">
+
+            <!--BREADCRUMB -->
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                >
+                <a href="#">Self-Help: How to Apologize</a>
+            </div>
+
+            <!-- POST BEGIN -->
+            <!-- POST TITLE -->
+            <div class="post-wrapper">
+                <h3>
+                    how to apologize
+                </h3>
+
+                <!-- QUOTE -->
+                <p class="quote">
+                    "An apology may be one of the least costly and most rewarding
+                    investments you can make."
+                    <br>
+                    – Roger Fisher and William Ury (Getting to Yes)
+                </p>
+
+                <!-- HEADING 3 -->
+                <h4>
+                    Background Info
+                </h4>
+
+                <p>
+                    In November 2021, we created a series of greeting cards called Remorse Code that offered a simple,
+                    friendly step-by-step, fill-in-the-blank style communication device for your relational fuck-ups.
+
+                    The idea was that apologizing (and real apologizing, not the half-hearted obligatory kind) is a
+                    fundamental part of healthy relationships. Honing your apologizing skills adds to your communication
+                    toolkit, and allows for you to deepen all the relationship essentials: trust, connection,
+                    vulnerability,
+                    compassion, and empathy.
+
+                    Below we offer the cards as a free PDF for download, in addition to further information and tips on
+                    how
+                    to use them. You can also use the cards as a self reflection tool, processing a mishap, or as a
+                    jumping
+                    point as journal prompts to apologize to yourself.
+
+                    We hope that this tool eases the process a little, and helps you to do the difficult (but right)
+                    thing.
+                    At the end is further reading and more resources for apology processes. Good luck!
+
+                </p>
+
+                <div class="funky-image-grid">
+                    <div id="rotate-left-5deg">
+                        <img src="../images/apology-guide/IM SORRY02-F.jpg" class="funky-image" />
+                    </div>
+                    <div id="rotate-right-5deg">
+                        <img src="../images/apology-guide/IM SORRY02-B.jpg" class="funky-image" />
+                    </div>
+                    <div id="rotate-right-3deg">
+                        <img src="../images/apology-guide/IM SORRY01-B.jpg" class="funky-image" />
+                    </div>
+                    <div id="rotate-left-5deg">
+                        <img src="../images/apology-guide/IM SORRY01-F.jpg" class="funky-image" />
+                    </div>
+                </div>
+
+
+                <button class="button-01">
+                    <a href="../images/apology-guide/IM SORRY01-B.jpg" target="_blank">Download (update
+                        link)</a>
+                </button>
+
+                <!-- HEADING 3 -->
+                <h4>
+                    Disclaimer (read this and think)
+                </h4>
+
+                <p>
+                    Remorse Code is for low-level, not (too) serious, mistakes, slip ups, and faults that we all commit
+                    and
+                    experience: forgetting a friend's birthday, not doing your half of the household chores, a passive
+                    aggressive comment towards a coworker. We all mess up from time-to-time and hurt feelings
+                    unintentionally.
+
+                    Not addressing things can lead to bigger problems like misunderstanding and resentment. Apologizing
+                    is
+                    HARD but it starts with taking accountability for what happened. However, for more serious harms
+                    like
+                    cheating or manipulation, you will need to take the apology beyond this card.
+
+                    Use your discretion and relationship history to determine your personalized apology action plan.
+
+                    Building a culture of accountability begins with mastering the apology, as uncomfortable as it may
+                    be.
+                    Start with yourself. Start small.</p>
+
+                <p>
+                    Who this is for
+                <ul>
+                    <li>people who had or are in an interpersonal conflict involving mistakes, regrets, and slip-ups new
+                        or old</li>
+                    <li> people who have to continue be around each other in your lives (coworkers, roommates,
+                        neighbours etc)</li>
+                    <br>
+                    Who this is NOT for
+                    <li>those in current and past abusive situations where severe harm was done</li>
+                    <li>people you don't have a relationship with or need/want to continue being in relationship with
+                        (set a
+                        boundary if you can)</li>
+                </ul>
+
+                </p>
+            </div>
+        </div> <!-- post wrapper & site wrapper end-->
+    </main>
+
+
+    <!-- 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+-->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <a href="https://www.instagram.com/nonsequitur.world/">
+                <img src="../images/instagram.svg" class="social" alt="instagram logo">
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
