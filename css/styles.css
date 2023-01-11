@@ -107,12 +107,17 @@ p {
 
 .breadcrumb {
   margin: 50px 0 50px 10px;
+  font-family: Messina;
+  font-size: 1em;
+font-weight: 700;
+color: #111111;
 
 }
 
 .breadcrumb a {
   font-family: Messina;
   font-size: 1em;
+  font-weight: 500;
   color: #111111;
 }
 
@@ -290,14 +295,7 @@ a {
   /* border: dashed 1px rgba(255, 0, 0, 0.349);*/
 }
 
-.landing-self-help-grid a {
-  text-decoration: none;
-  font-family: Canela;
-  font-size: 2em;
-  text-align: center;
-  vertical-align: middle;
 
-}
 
 /*SELF-HELP GRID, CARD STYLING*/
 
@@ -311,6 +309,11 @@ a {
   justify-content: center;
   border-radius: 10px;
   padding: 5px;
+  text-decoration: none;
+  font-family: Canela;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .card:hover {
