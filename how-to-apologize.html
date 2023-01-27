@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>nonsequitur world 🌎</title>
+<link rel="icon" type="image/x-icon" href="images/ns-favicon.svg">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../css/styles.css">
+
+<!-- 
+    JAVASCRIPTING!!!
+    JAVASCRIPTING!!!
+    JAVASCRIPTING!!!
+    JAVASCRIPTING!!! 
+-->
+<script>
+    /* MOBILE NAV OPEN AND CLOSE */
+    /* Open when someone clicks on the menu span element */
+    function openNav() {
+        document.getElementById("mobile-menu-overlay").style.width = "100%";
+        document.getElementById("mobile-menu-items").style.display = "block";
+    }
+
+    /* Close when someone clicks on "Close"  inside the overlay */
+    function closeNav() {
+        document.getElementById("mobile-menu-overlay").style.width = "0%";
+        document.getElementById("mobile-menu-items").style.display = "none";
+    }
+
+
+    /* TOC NAV - STICKY ON SCROLL */
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () { stickyNav() };
+
+    // Get the navbar
+    var tocbar = document.getElementById("tocbar");
+
+    // Get the offset position of the navbar
+    var sticky = tocbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function stickyNav() {
+        if (window.pageYOffset >= 100) {
+            document.getElementById("tocbar").classList.add("sticky")
+        } else {
+            document.getElementById("tocbar").classList.remove("sticky")
+        }
+    }
+
+    /* TOC BAR TOGGLER */
+
+    function openTOC() {
+        var toggler = document.getElementById("toc-expand");
+        var tocOpen = document.getElementById("toc-open");
+        var tocClose = document.getElementById("toc-close");
+
+        toggler.style.display = "block";
+        tocOpen.style.display = "inline-block";
+        tocClose.style.display = "none";
+    }
+
+    function closeTOC() {
+        var toggler = document.getElementById("toc-expand");
+        var tocOpen = document.getElementById("toc-open");
+        var tocClose = document.getElementById("toc-close");
+
+        toggler.style.display = "none";
+        tocOpen.style.display = "none";
+        tocClose.style.display = "inline-block";
+    }
+
+</script>
+
+<body>
+    <!-- MOBILE NAV OVERLAY -->
+    <div id="mobile-menu-overlay">
+        <a href="javascript:void(0)" class="mobile-menu-close" onclick="closeNav()">
+            <img src="../images/close.svg" class="close-icon" alt="close"></a>
+        <ul id="mobile-menu-items">
+            <li class="mobile-nav-li"><a href="../about.html" class="mobile-nav-a">about</a></li>
+            <li class="mobile-nav-li"><a href="../self-help.html" class="mobile-nav-a">self-help</a></li>
+            <li class="mobile-nav-li"><a href="../blog.html" class="mobile-nav-a">blog</a></li>
+            <li class="mobile-nav-li"><a href="../podcast.html" class="mobile-nav-a">podcast</a></li>
+            <li class="mobile-nav-li"><a href="../work-with-us.html" class="mobile-nav-a">work with us</a></li>
+        </ul>
+
+    </div>
+
+    <!-- HEADER AND LOGO -->
+    <div class="header">
+        <a href="../index.html">
+            <img src="../images/nonsequitur-yellow.svg" class="logo" alt="nonsequitur logo">
+        </a>
+
+        <!-- MOBILE MENU NAVIGATION BAR -->
+        <span id="mobile-menu-btn" onclick="openNav()">
+            <img src="../images/menu.svg" class="menu-icon" alt="menu">
+        </span>
+
+        <!-- DESKTOP NAV -->
+        <ul class="menu">
+            <li><a href="../about.html">about</a></li>
+            <li><a href="../self-help.html">self-help</a></li>
+            <li><a href="../blog.html">blog</a></li>
+            <li><a href="../podcast.html">podcast</a></li>
+            <li><a href="../work-with-us.html">work with us</a></li>
+        </ul>
+    </div>
+
+
+    <!-- TABLE OF CONTENTS NAV-->
+    <div id="tocbar">
+        <div id="tocbar-target">
+            <div class="toc-container">
+                <div class="toc-menu">
+                    <!-- TOGGLER - OPEN / CLOSE -->
+                    <button class="tocbar-toggler">
+                        <span id="toc-close" onclick="openTOC()">
+                            + Table of Contents</span>
+                        <span id="toc-open" onclick="closeTOC()">
+                            – Table of Contents</span>
+                        <!-- <img src="../images/collapsible-closed.svg" id="toc-close" onclick="openTOC()" />
+                    <img src="../images/collapsible-opened.svg" id="toc-open" onclick="closeTOC()" />
+                    Table of Contents !-->
+                    </button>
+                </div>
+            </div>
+        </div>
+        <ul id="toc-expand">
+            <li class="toc-item">
+                <a class="toc-link" href="#backgroundinfo">1. Background Info</a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#disclaimer">2. Disclaimer – Is this for you?</a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#how-to-use">3. How to Use (Apology Flowchart)</a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#smooth-apology">4. Tips for a Smoooooth Apology</a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#apology-rubric">5. Notes App-ology Rubric</a>
+            </li>
+            <li class="toc-item">
+                <a class="toc-link" href="#extra-credit">6. Extra credit</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!! 
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!!
+        DO NOT REMOVE ANYTHING ABOVE THIS!!!!! 
+-->
+
+    <!-- MAIN CONTENT!!!!! BITCH -->
+
+    <main>
+        <div class="wrapper">
+
+
+            <div class="post-wrapper">
+
+                <!--BREADCRUMB -->
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    >
+                    <a href="../self-help.html">Self-Help</a> > How to Apologize
+                </div>
+
+                <!-- POST BEGIN -->
+                <!-- POST TITLE -->
+
+                <h3 id="backgroundinfo">
+                    how to apologize
+                </h3>
+
+                <!-- QUOTE -->
+                <p class="quote">
+                    "An apology may be one of the least costly and most rewarding
+                    investments you can make."
+                    <br>
+                    – Roger Fisher and William Ury (Getting to Yes)
+                </p>
+
+                <!-- SECTION 1 -->
+                <h4 class="blog-new-section">
+                    Background Info
+                </h4>
+
+                <p>
+                    In November 2021, we created a series of greeting cards called Remorse Code that offered a simple,
+                    friendly step-by-step, fill-in-the-blank style communication device for your relational fuck-ups.
+
+                    The idea was that apologizing (and real apologizing, not the half-hearted obligatory kind) is a
+                    fundamental part of healthy relationships. Honing your apologizing skills adds to your communication
+                    toolkit, and allows for you to deepen all the relationship essentials: trust, connection,
+                    vulnerability,
+                    compassion, and empathy.
+
+                    Below we offer the cards as a free PDF for download, in addition to further information and tips on
+                    how
+                    to use them. You can also use the cards as a self reflection tool, processing a mishap, or as a
+                    jumping
+                    point as journal prompts to apologize to yourself.
+
+                    We hope that this tool eases the process a little, and helps you to do the difficult (but right)
+                    thing.
+                    At the end is further reading and more resources for apology processes. Good luck!
+
+                </p>
+
+                <div class="funky-image-grid">
+                    <div id="rotate-left-5deg">
+                        <img src="../images/apology-guide/IM SORRY02-F.jpg" class="funky-image" />
+                    </div>
+                    <div id="rotate-right-5deg">
+                        <img src="../images/apology-guide/IM SORRY02-B.jpg" class="funky-image" />
+                    </div>
+                    <div id="rotate-right-3deg">
+                        <img src="../images/apology-guide/IM SORRY01-B.jpg" class="funky-image" />
+                    </div>
+                    <div id="rotate-left-5deg">
+                        <img src="../images/apology-guide/IM SORRY01-F.jpg" class="funky-image" />
+                    </div>
+                </div>
+
+                <div class="button-container" id="disclaimer">
+                    <button class="button-01">
+                        <a href="../files/remorsecode_cards.zip" target="_blank">
+                            Download Cards</a>
+                    </button>
+                </div>
+
+                <!-- SECTION 2 -->
+                <h4 class="blog-new-section">
+                    Disclaimer (read this and think)
+                </h4>
+
+                <p>
+                    Remorse Code is for low-level, not (too) serious, mistakes, slip ups, and faults that we all commit
+                    and
+                    experience: forgetting a friend's birthday, not doing your half of the household chores, a passive
+                    aggressive comment towards a coworker. We all mess up from time-to-time and hurt feelings
+                    unintentionally.
+
+                    Not addressing things can lead to bigger problems like misunderstanding and resentment. Apologizing
+                    is
+                    HARD but it starts with taking accountability for what happened. However, for more serious harms
+                    like
+                    cheating or manipulation, you will need to take the apology beyond this card.
+
+                    Use your discretion and relationship history to determine your personalized apology action plan.
+
+                    Building a culture of accountability begins with mastering the apology, as uncomfortable as it may
+                    be.
+                    Start with yourself. Start small.</p>
+
+                <strong id="how-to-use">Who this is for</strong>
+                <br>
+                <ul>
+                    <li>people who had or are in an interpersonal conflict involving mistakes, regrets, and slip-ups new
+                        or old
+                    </li>
+                    <li> people who have to continue be around each other in your lives (coworkers, roommates,
+                        neighbours etc)
+                    </li>
+                </ul>
+                <strong>Who this is NOT for</strong>
+                <br>
+                <ul>
+                    <li>those in current and past abusive situations where severe harm was done
+                    </li>
+                    <li>people you don't have a relationship with or need/want to continue being in relationship with
+                        (set a boundary if you can)
+                    </li>
+                </ul>
+
+                <!-- SECTION 3 -->
+                <h4 class="blog-new-section">
+                    How to Use Guide
+                </h4>
+
+                <p>
+                    Not sure if Remorse Code is for you? Use our flowchart to find out:
+                </p>
+                <img src="../images/apology-guide/APOLOGY CHART 2023.png" class="post-img">
+
+                <div class="button-container" id="smooth-apology">
+                    <button class="button-01">
+                        <a href="../images/apology-guide/apologychart2023.pdf" target="_blank">
+                            Click to expand</a>
+                    </button>
+                </div>
+
+                <!-- SECTION 4 -->
+                <h4 class="blog-new-section">
+                    Tips for a smoooooth apology
+                </h4>
+
+                <h4>
+                    BEFORE
+                </h4>
+
+                <strong>Be proactive!</strong>
+                <br>
+                <ul>
+                    <li>You're already doing the right thing by taking action
+                    </li>
+                    <li>Conflict is totally normal and healthy
+                    </li>
+                    <li>Putting things off can cause resentment or worse
+                    </li>
+                </ul>
+
+                <strong>Start with yourself</strong>
+                <br>
+                <ul>
+                    <li>You can only control and change yourself and your feelings
+                    </li>
+                    <li>Do some self reflection and investigate your life
+                    </li>
+                </ul>
+
+                <strong>Blame is bad</strong>
+                <br>
+                <ul>
+                    <li>Ask "what caused this?" instead of looking for blame
+                    </li>
+                    <li>Getting to root causes prevents future problems
+                    </li>
+                </ul>
+
+                <strong>Practice (or use pencil)</strong>
+                <br>
+                <ul>
+                    <li>Write a draft before
+                    </li>
+                    <li>Practice with someone you trust, or in the mirror/shower!
+                    </li>
+                </ul>
+                <br>
+                <h4>
+                    DURING
+                </h4>
+
+                <strong>Remember there was a breach of trust</strong>
+                <br>
+                <ul>
+                    <li>Make this the focal point for restoring the relationship
+                    </li>
+                    <li>Practice empathy and put yourself in the other person's shoes
+                    </li>
+                </ul>
+
+                <strong>Don't be fake</strong>
+                <br>
+                <ul>
+                    <li>Be sincere and authentic
+                    </li>
+                    <li>If it isn't genuine, it's not an apology
+                    </li>
+                    <li>If you don't want to apologize, don't
+                    </li>
+                </ul>
+
+                <strong>Use "I" statements</strong>
+                <br>
+                <ul>
+                    <li>"You" statements are defensive and combative
+                    </li>
+                    <li>Again, you can only be accountable for yourself
+                    </li>
+                </ul>
+
+                <strong>No "BUTS"</strong>
+                <br>
+                <ul>
+                    <li>If you wanna write "i'm sorry, but..." stop right there
+                    </li>
+                    <li>Same goes for "Sorry you felt that way"
+                    </li>
+                </ul>
+
+                <strong>Impact not intent</strong>
+                <br>
+                <ul>
+                    <li>Practice humility, empathy, and compassion
+                    </li>
+                    <li>Don't try to explain why you did the thing, only focus on the impact experienced by the other
+                        person
+                    </li>
+                </ul>
+
+                <br>
+                <h4>
+                    AFTER
+                </h4>
+
+                <strong>Let go!</strong>
+                <br>
+                <ul>
+                    <li>Release outcome and control
+                    </li>
+                </ul>
+
+                <strong>Commit to changed behaviour over being forgiven</strong>
+                <br><br>
+
+                <strong id="apology-rubric">Practice makes perfect</strong>
+                <br>
+                <ul>
+                    <li>You might have to do it again, and that's okay
+                    </li>
+                    <li>Apologizing is hard, but starting with easy ones make future ones less daunting
+                    </li>
+                    <li>The more you do it, the better you get
+                    </li>
+                </ul>
+
+                <!-- SECTION 4 -->
+                <h2 class="blog-new-section">
+                    Notes App-Ology Rubric 📝
+                </h2>
+
+                <p>
+                    Are you sick and tired of reading another bad notes app apology?
+                    So are we. Here’s a rubric we created to grade the authenticity of every apology from PR
+                    stun–ahem–offiial celebrity statements to your coworker’s long slack message.
+                </p>
+
+                <strong>Checklist (Total 100%)</strong>
+                <br>
+                <ul>
+                    <li>Say you’re sorry (take responsibility) 35%
+                    </li>
+                    <li>Say what you’re sorry for (name the violation) 35%
+                    </li>
+                    <li>Describe the impact of what you did (how did it affect the other party) 20%
+                    </li>
+                    <li>Share your plan to improve (commit to change) 10%
+                    </li>
+                </ul>
+
+                <strong>Extra points (add 5%)</strong>
+                <br>
+                <ul class="custom-ul">
+                    <li class="list-plus">Staying on topic, concise
+                    </li>
+                    <li class="list-plus">Authentic voice
+                    </li>
+                    <li class="list-plus">Commitment/proof of material reparations
+                    </li>
+                    <li class="list-plus">Timely
+                    </li>
+                    <li class="list-plus">Proactive
+                    </li>
+                    <li class="list-plus">Self-reflective
+                    </li>
+                </ul>
+
+                <strong>Deductions (Deduct 5%)</strong>
+                <br>
+                <ul class="custom-ul" id="extra-credit">
+                    <li class="list-subtract">Any variation of “I’m sorry but”, “I’m sorry you feel that way” “If….”,
+                        etc
+                    </li>
+                    <li class="list-subtract">Very fake/ scripted
+                    </li>
+                    <li class="list-subtract">Backtracking
+                    </li>
+                    <li class="list-subtract">Late/bad timing
+                    </li>
+                    <li class="list-subtract">Manipulative
+                    </li>
+                    <li class="list-subtract">Blaming
+                    </li>
+                </ul>
+
+                <!-- 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!!
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+    DO NOT REMOVE ANYTHING BELOW THIS!!!! 
+-->
+                <!-- post wrapper & site wrapper end-->
+            </div>
+        </div>
+
+        <!-- EXTRAS WRAPPER -->
+        <div class="extras-wrapper">
+            <div class="post-wrapper">
+                <h4>
+                    Extra Credit (Further reading):
+                </h4>
+
+                <div class="resource">
+                <strong><a href="https://leavingevidence.wordpress.com/2019/12/18/how-to-give-a-good-apology-part-1-the-four-parts-of-accountability/" target="_blank">
+                    The Four Parts of Accountability & How to Give a Genuine Apology</a>
+                </strong>
+                <br>
+                Blog article – By Mia Mingus, writer, educator, and trainer for transformative justice and disability justice
+            </div>
+
+            <div class="resource">
+                <strong><a href="https://brenebrown.com/podcast/harriet-lerner-and-brene-im-sorry-how-to-apologize-why-it-matters-part-1-of-2/" target="_blank">
+                    I’m Sorry: How to Apologize and Why It Matters, Part 1 of 2 with Dr. Harriet Lerner
+                </a>
+                </strong>
+                <br>
+                Podcast episode - By Brené Brown, professor, author, and researcher & Harriet Lerner, clinical psychologist
+            </div>
+
+            <div class="resource">
+                <strong><a href="https://www.simonandschuster.com/books/Why-Wont-You-Apologize/Harriet-Lerner/9781501129612" target="_blank">
+                    Why Won’t You Apologize?: Healing Big Betrayals and Everyday Hurts
+                </a>
+                </strong>
+                <br>
+                Book – By Harriet Lerner, clinical psychologist            
+            </div>
+
+            <div class="resource">
+                <strong><a href="https://www.youtube.com/watch?v=q-ApAdEOm5s" target="_blank">
+                    The Best Way to Apologize [According to science]
+                </a>
+                </strong>
+                <br>
+                Video – By TedEd            
+            </div>
+
+
+        </div>
+        </div>
+        <!-- EXTRAS WRAPPER END -->
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <a href="https://www.instagram.com/nonsequitur.world/">
+                <img src="../images/instagram.svg" class="social" alt="instagram logo">
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
