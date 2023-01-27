@@ -312,7 +312,7 @@ main {
   padding-bottom: 40px;
 }
 
-.extras-wrapper h4, p, a {
+.extras-wrapper h4, p {
   color: #E8E3D0;
 }
 
@@ -330,6 +330,12 @@ main {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.resource a {
+  color: #E8E3D0;
+
+}
+
 
 /*SELF-HELP GRID, CARD STYLING*/
 
